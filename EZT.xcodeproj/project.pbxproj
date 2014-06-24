@@ -90,8 +90,8 @@
 		972803AC1957FBFF00AE1956 /* MPSkewedCell_FontSizeAdjust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSkewedCell_FontSizeAdjust.h; sourceTree = "<group>"; };
 		972803AD1957FBFF00AE1956 /* MPSkewedCell_FontSizeAdjust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSkewedCell_FontSizeAdjust.m; sourceTree = "<group>"; };
 		9737E13C195807860076EABA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		9737E187195818640076EABA /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
-		9737E188195818640076EABA /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		9737E187195818640076EABA /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utilities.h; path = ../ALUtilities/ALUtilities/Utilities/Utilities.h; sourceTree = SOURCE_ROOT; };
+		9737E188195818640076EABA /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utilities.m; path = ../ALUtilities/ALUtilities/Utilities/Utilities.m; sourceTree = SOURCE_ROOT; };
 		9737E18A19581B930076EABA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		9737E18C195926B30076EABA /* ProjectDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectDefine.h; sourceTree = "<group>"; };
 		9757E19419594B0100E73FA2 /* ALTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTransition.h; sourceTree = "<group>"; };
