@@ -1,0 +1,41 @@
+PODS:
+  - ChuzzleKit (1.0.2)
+  - HexColors (2.2.1)
+  - PromiseKit (0.9.5):
+    - PromiseKit/base
+    - PromiseKit/CoreLocation
+    - PromiseKit/Foundation
+    - PromiseKit/MapKit
+    - PromiseKit/UIKit
+  - PromiseKit/base (0.9.5)
+  - PromiseKit/CoreLocation (0.9.5):
+    - PromiseKit/base
+  - PromiseKit/Foundation (0.9.5):
+    - ChuzzleKit
+    - PromiseKit/base
+  - PromiseKit/MapKit (0.9.5):
+    - PromiseKit/base
+  - PromiseKit/UIKit (0.9.5):
+    - PromiseKit/base
+  - SDWebImage (3.5.4):
+    - SDWebImage/Core
+  - SDWebImage/Core (3.5.4)
+  - TSMessages (0.9.9):
+    - HexColors
+  - Tweaks (1.1.0)
+
+DEPENDENCIES:
+  - PromiseKit (= 0.9.5)
+  - SDWebImage (~> 3.5.4)
+  - TSMessages (~> 0.9.9)
+  - Tweaks (~> 1.1.0)
+
+SPEC CHECKSUMS:
+  ChuzzleKit: 9932e7e4576360ae6ed95f912e74d2ee4288626b
+  HexColors: 01384d2bbe8dc4ffa43c3b4135db6e976952d153
+  PromiseKit: d99f0302e2a68ffe35db3893a033afff08ec72d8
+  SDWebImage: 571295c8acbb699505a0f68e54506147c3de9ea7
+  TSMessages: 2999ef55e532378692e9d14d32da2bb60e285129
+  Tweaks: 05b197d4a1247288f576587546bc1932189d8c98
+
+COCOAPODS: 0.33.1

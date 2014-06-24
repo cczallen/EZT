@@ -1,0 +1,644 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		971F296519572CD900512301 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971F296419572CD900512301 /* Foundation.framework */; };
+		971F296719572CD900512301 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971F296619572CD900512301 /* CoreGraphics.framework */; };
+		971F296919572CD900512301 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971F296819572CD900512301 /* UIKit.framework */; };
+		971F296F19572CD900512301 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 971F296D19572CD900512301 /* InfoPlist.strings */; };
+		971F297119572CD900512301 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 971F297019572CD900512301 /* main.m */; };
+		971F297519572CD900512301 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 971F297419572CD900512301 /* AppDelegate.m */; };
+		971F297819572CD900512301 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 971F297619572CD900512301 /* Main.storyboard */; };
+		971F297D19572CD900512301 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 971F297C19572CD900512301 /* Images.xcassets */; };
+		971F298419572CD900512301 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971F298319572CD900512301 /* XCTest.framework */; };
+		971F298519572CD900512301 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971F296419572CD900512301 /* Foundation.framework */; };
+		971F298619572CD900512301 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971F296819572CD900512301 /* UIKit.framework */; };
+		971F298E19572CD900512301 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 971F298C19572CD900512301 /* InfoPlist.strings */; };
+		971F299019572CD900512301 /* EZTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 971F298F19572CD900512301 /* EZTTests.m */; };
+		971F29A119572E0000512301 /* EZTNearByRestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 971F299E19572E0000512301 /* EZTNearByRestaurantViewController.m */; };
+		971F29A219572E0000512301 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 971F29A019572E0000512301 /* ViewController.m */; };
+		971F29A619572E3000512301 /* EZTService.m in Sources */ = {isa = PBXBuildFile; fileRef = 971F29A519572E3000512301 /* EZTService.m */; };
+		972803A31957F55C00AE1956 /* MPSkewed-LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 972803991957F55C00AE1956 /* MPSkewed-LICENSE */; };
+		972803A41957F55C00AE1956 /* MPSkewed-README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9728039A1957F55C00AE1956 /* MPSkewed-README.md */; };
+		972803A51957F55C00AE1956 /* MPSkewedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9728039C1957F55C00AE1956 /* MPSkewedCell.m */; };
+		972803A61957F55C00AE1956 /* MPSkewedParallaxLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9728039E1957F55C00AE1956 /* MPSkewedParallaxLayout.m */; };
+		972803A71957F55C00AE1956 /* MPSkewedTransitionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 972803A01957F55C00AE1956 /* MPSkewedTransitionLayout.m */; };
+		972803A81957F55C00AE1956 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 972803A21957F55C00AE1956 /* UIView+Frame.m */; };
+		972803AB1957F5B800AE1956 /* EZTNearByRestaurantsSkewedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 972803AA1957F5B800AE1956 /* EZTNearByRestaurantsSkewedViewController.m */; };
+		972803AE1957FBFF00AE1956 /* MPSkewedCell_FontSizeAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = 972803AD1957FBFF00AE1956 /* MPSkewedCell_FontSizeAdjust.m */; };
+		9737E13D195807860076EABA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9737E13C195807860076EABA /* CoreLocation.framework */; };
+		9737E189195818640076EABA /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9737E188195818640076EABA /* Utilities.m */; };
+		9737E18B19581B930076EABA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9737E18A19581B930076EABA /* Podfile */; };
+		9757E19619594B0100E73FA2 /* ALTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9757E19519594B0100E73FA2 /* ALTransition.m */; };
+		9757E1991959512F00E73FA2 /* AnimationTransitionBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9757E1981959512F00E73FA2 /* AnimationTransitionBaseViewController.m */; };
+		EB1CB58321F64C94A6BB8D6D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 307E6F8BBAFF44049FD90331 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		971F298719572CD900512301 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 971F295919572CD900512301 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 971F296019572CD900512301;
+			remoteInfo = EZT;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		21C9B0B13719471CA8F3337A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		307E6F8BBAFF44049FD90331 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		971F296119572CD900512301 /* EZT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		971F296419572CD900512301 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		971F296619572CD900512301 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		971F296819572CD900512301 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		971F296C19572CD900512301 /* EZT-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EZT-Info.plist"; sourceTree = "<group>"; };
+		971F296E19572CD900512301 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		971F297019572CD900512301 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		971F297219572CD900512301 /* EZT-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EZT-Prefix.pch"; sourceTree = "<group>"; };
+		971F297319572CD900512301 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		971F297419572CD900512301 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		971F297719572CD900512301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		971F297C19572CD900512301 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		971F298219572CD900512301 /* EZTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EZTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		971F298319572CD900512301 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		971F298B19572CD900512301 /* EZTTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EZTTests-Info.plist"; sourceTree = "<group>"; };
+		971F298D19572CD900512301 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		971F298F19572CD900512301 /* EZTTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EZTTests.m; sourceTree = "<group>"; };
+		971F299D19572E0000512301 /* EZTNearByRestaurantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZTNearByRestaurantViewController.h; sourceTree = "<group>"; };
+		971F299E19572E0000512301 /* EZTNearByRestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZTNearByRestaurantViewController.m; sourceTree = "<group>"; };
+		971F299F19572E0000512301 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		971F29A019572E0000512301 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		971F29A419572E3000512301 /* EZTService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZTService.h; sourceTree = "<group>"; };
+		971F29A519572E3000512301 /* EZTService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZTService.m; sourceTree = "<group>"; };
+		972803991957F55C00AE1956 /* MPSkewed-LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "MPSkewed-LICENSE"; sourceTree = "<group>"; };
+		9728039A1957F55C00AE1956 /* MPSkewed-README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "MPSkewed-README.md"; sourceTree = "<group>"; };
+		9728039B1957F55C00AE1956 /* MPSkewedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSkewedCell.h; sourceTree = "<group>"; };
+		9728039C1957F55C00AE1956 /* MPSkewedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSkewedCell.m; sourceTree = "<group>"; };
+		9728039D1957F55C00AE1956 /* MPSkewedParallaxLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSkewedParallaxLayout.h; sourceTree = "<group>"; };
+		9728039E1957F55C00AE1956 /* MPSkewedParallaxLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSkewedParallaxLayout.m; sourceTree = "<group>"; };
+		9728039F1957F55C00AE1956 /* MPSkewedTransitionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSkewedTransitionLayout.h; sourceTree = "<group>"; };
+		972803A01957F55C00AE1956 /* MPSkewedTransitionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSkewedTransitionLayout.m; sourceTree = "<group>"; };
+		972803A11957F55C00AE1956 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		972803A21957F55C00AE1956 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		972803A91957F5B800AE1956 /* EZTNearByRestaurantsSkewedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZTNearByRestaurantsSkewedViewController.h; sourceTree = "<group>"; };
+		972803AA1957F5B800AE1956 /* EZTNearByRestaurantsSkewedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZTNearByRestaurantsSkewedViewController.m; sourceTree = "<group>"; };
+		972803AC1957FBFF00AE1956 /* MPSkewedCell_FontSizeAdjust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSkewedCell_FontSizeAdjust.h; sourceTree = "<group>"; };
+		972803AD1957FBFF00AE1956 /* MPSkewedCell_FontSizeAdjust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSkewedCell_FontSizeAdjust.m; sourceTree = "<group>"; };
+		9737E13C195807860076EABA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9737E187195818640076EABA /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		9737E188195818640076EABA /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		9737E18A19581B930076EABA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		9737E18C195926B30076EABA /* ProjectDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectDefine.h; sourceTree = "<group>"; };
+		9757E19419594B0100E73FA2 /* ALTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTransition.h; sourceTree = "<group>"; };
+		9757E19519594B0100E73FA2 /* ALTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALTransition.m; sourceTree = "<group>"; };
+		9757E1971959512F00E73FA2 /* AnimationTransitionBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = AnimationTransitionBaseViewController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 1; wrapsLines = 0; };
+		9757E1981959512F00E73FA2 /* AnimationTransitionBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationTransitionBaseViewController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 1; wrapsLines = 0; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		971F295E19572CD900512301 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9737E13D195807860076EABA /* CoreLocation.framework in Frameworks */,
+				971F296719572CD900512301 /* CoreGraphics.framework in Frameworks */,
+				971F296919572CD900512301 /* UIKit.framework in Frameworks */,
+				971F296519572CD900512301 /* Foundation.framework in Frameworks */,
+				EB1CB58321F64C94A6BB8D6D /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		971F297F19572CD900512301 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				971F298419572CD900512301 /* XCTest.framework in Frameworks */,
+				971F298619572CD900512301 /* UIKit.framework in Frameworks */,
+				971F298519572CD900512301 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		971F295819572CD900512301 = {
+			isa = PBXGroup;
+			children = (
+				971F296A19572CD900512301 /* EZT */,
+				971F298919572CD900512301 /* EZTTests */,
+				971F296319572CD900512301 /* Frameworks */,
+				971F296219572CD900512301 /* Products */,
+				21C9B0B13719471CA8F3337A /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		971F296219572CD900512301 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				971F296119572CD900512301 /* EZT.app */,
+				971F298219572CD900512301 /* EZTTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		971F296319572CD900512301 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9737E13C195807860076EABA /* CoreLocation.framework */,
+				972803971957F55C00AE1956 /* Components */,
+				971F296419572CD900512301 /* Foundation.framework */,
+				971F296619572CD900512301 /* CoreGraphics.framework */,
+				971F296819572CD900512301 /* UIKit.framework */,
+				971F298319572CD900512301 /* XCTest.framework */,
+				307E6F8BBAFF44049FD90331 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		971F296A19572CD900512301 /* EZT */ = {
+			isa = PBXGroup;
+			children = (
+				971F297319572CD900512301 /* AppDelegate.h */,
+				971F297419572CD900512301 /* AppDelegate.m */,
+				971F297619572CD900512301 /* Main.storyboard */,
+				971F29A319572E1700512301 /* Services */,
+				971F299C19572E0000512301 /* ViewControllers */,
+				971F297C19572CD900512301 /* Images.xcassets */,
+				971F296B19572CD900512301 /* Supporting Files */,
+			);
+			path = EZT;
+			sourceTree = "<group>";
+		};
+		971F296B19572CD900512301 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9737E18A19581B930076EABA /* Podfile */,
+				971F296C19572CD900512301 /* EZT-Info.plist */,
+				971F296D19572CD900512301 /* InfoPlist.strings */,
+				971F297019572CD900512301 /* main.m */,
+				971F297219572CD900512301 /* EZT-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		971F298919572CD900512301 /* EZTTests */ = {
+			isa = PBXGroup;
+			children = (
+				971F298F19572CD900512301 /* EZTTests.m */,
+				971F298A19572CD900512301 /* Supporting Files */,
+			);
+			path = EZTTests;
+			sourceTree = "<group>";
+		};
+		971F298A19572CD900512301 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				971F298B19572CD900512301 /* EZTTests-Info.plist */,
+				971F298C19572CD900512301 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		971F299C19572E0000512301 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				971F299D19572E0000512301 /* EZTNearByRestaurantViewController.h */,
+				971F299E19572E0000512301 /* EZTNearByRestaurantViewController.m */,
+				972803A91957F5B800AE1956 /* EZTNearByRestaurantsSkewedViewController.h */,
+				972803AA1957F5B800AE1956 /* EZTNearByRestaurantsSkewedViewController.m */,
+				972803AC1957FBFF00AE1956 /* MPSkewedCell_FontSizeAdjust.h */,
+				972803AD1957FBFF00AE1956 /* MPSkewedCell_FontSizeAdjust.m */,
+				9757E1971959512F00E73FA2 /* AnimationTransitionBaseViewController.h */,
+				9757E1981959512F00E73FA2 /* AnimationTransitionBaseViewController.m */,
+				971F299F19572E0000512301 /* ViewController.h */,
+				971F29A019572E0000512301 /* ViewController.m */,
+				9757E19419594B0100E73FA2 /* ALTransition.h */,
+				9757E19519594B0100E73FA2 /* ALTransition.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		971F29A319572E1700512301 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				971F29A419572E3000512301 /* EZTService.h */,
+				971F29A519572E3000512301 /* EZTService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		972803971957F55C00AE1956 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9737E186195818640076EABA /* Utilities */,
+				972803981957F55C00AE1956 /* MPSkewedClasses */,
+				9737E18C195926B30076EABA /* ProjectDefine.h */,
+			);
+			name = Components;
+			path = EZT/Components;
+			sourceTree = "<group>";
+		};
+		972803981957F55C00AE1956 /* MPSkewedClasses */ = {
+			isa = PBXGroup;
+			children = (
+				972803991957F55C00AE1956 /* MPSkewed-LICENSE */,
+				9728039A1957F55C00AE1956 /* MPSkewed-README.md */,
+				9728039B1957F55C00AE1956 /* MPSkewedCell.h */,
+				9728039C1957F55C00AE1956 /* MPSkewedCell.m */,
+				9728039D1957F55C00AE1956 /* MPSkewedParallaxLayout.h */,
+				9728039E1957F55C00AE1956 /* MPSkewedParallaxLayout.m */,
+				9728039F1957F55C00AE1956 /* MPSkewedTransitionLayout.h */,
+				972803A01957F55C00AE1956 /* MPSkewedTransitionLayout.m */,
+				972803A11957F55C00AE1956 /* UIView+Frame.h */,
+				972803A21957F55C00AE1956 /* UIView+Frame.m */,
+			);
+			path = MPSkewedClasses;
+			sourceTree = "<group>";
+		};
+		9737E186195818640076EABA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9737E187195818640076EABA /* Utilities.h */,
+				9737E188195818640076EABA /* Utilities.m */,
+			);
+			name = Utilities;
+			path = ../../../ALUtilities/ALUtilities/Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		971F296019572CD900512301 /* EZT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 971F299319572CD900512301 /* Build configuration list for PBXNativeTarget "EZT" */;
+			buildPhases = (
+				3A77CAF3993B4B36B406A2A0 /* Check Pods Manifest.lock */,
+				971F295D19572CD900512301 /* Sources */,
+				971F295E19572CD900512301 /* Frameworks */,
+				971F295F19572CD900512301 /* Resources */,
+				7EACACCBF5E746918643121A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EZT;
+			productName = EZT;
+			productReference = 971F296119572CD900512301 /* EZT.app */;
+			productType = "com.apple.product-type.application";
+		};
+		971F298119572CD900512301 /* EZTTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 971F299619572CD900512301 /* Build configuration list for PBXNativeTarget "EZTTests" */;
+			buildPhases = (
+				971F297E19572CD900512301 /* Sources */,
+				971F297F19572CD900512301 /* Frameworks */,
+				971F298019572CD900512301 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				971F298819572CD900512301 /* PBXTargetDependency */,
+			);
+			name = EZTTests;
+			productName = EZTTests;
+			productReference = 971F298219572CD900512301 /* EZTTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		971F295919572CD900512301 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = AllenLee;
+				TargetAttributes = {
+					971F298119572CD900512301 = {
+						TestTargetID = 971F296019572CD900512301;
+					};
+				};
+			};
+			buildConfigurationList = 971F295C19572CD900512301 /* Build configuration list for PBXProject "EZT" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 971F295819572CD900512301;
+			productRefGroup = 971F296219572CD900512301 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				971F296019572CD900512301 /* EZT */,
+				971F298119572CD900512301 /* EZTTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		971F295F19572CD900512301 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9737E18B19581B930076EABA /* Podfile in Resources */,
+				972803A41957F55C00AE1956 /* MPSkewed-README.md in Resources */,
+				972803A31957F55C00AE1956 /* MPSkewed-LICENSE in Resources */,
+				971F297D19572CD900512301 /* Images.xcassets in Resources */,
+				971F296F19572CD900512301 /* InfoPlist.strings in Resources */,
+				971F297819572CD900512301 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		971F298019572CD900512301 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				971F298E19572CD900512301 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A77CAF3993B4B36B406A2A0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7EACACCBF5E746918643121A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		971F295D19572CD900512301 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9757E19619594B0100E73FA2 /* ALTransition.m in Sources */,
+				971F29A119572E0000512301 /* EZTNearByRestaurantViewController.m in Sources */,
+				972803A51957F55C00AE1956 /* MPSkewedCell.m in Sources */,
+				9757E1991959512F00E73FA2 /* AnimationTransitionBaseViewController.m in Sources */,
+				971F297519572CD900512301 /* AppDelegate.m in Sources */,
+				972803A81957F55C00AE1956 /* UIView+Frame.m in Sources */,
+				972803AE1957FBFF00AE1956 /* MPSkewedCell_FontSizeAdjust.m in Sources */,
+				971F29A219572E0000512301 /* ViewController.m in Sources */,
+				9737E189195818640076EABA /* Utilities.m in Sources */,
+				972803AB1957F5B800AE1956 /* EZTNearByRestaurantsSkewedViewController.m in Sources */,
+				971F29A619572E3000512301 /* EZTService.m in Sources */,
+				972803A61957F55C00AE1956 /* MPSkewedParallaxLayout.m in Sources */,
+				972803A71957F55C00AE1956 /* MPSkewedTransitionLayout.m in Sources */,
+				971F297119572CD900512301 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		971F297E19572CD900512301 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				971F299019572CD900512301 /* EZTTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		971F298819572CD900512301 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 971F296019572CD900512301 /* EZT */;
+			targetProxy = 971F298719572CD900512301 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		971F296D19572CD900512301 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				971F296E19572CD900512301 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		971F297619572CD900512301 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				971F297719572CD900512301 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		971F298C19572CD900512301 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				971F298D19572CD900512301 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		971F299119572CD900512301 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		971F299219572CD900512301 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		971F299419572CD900512301 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21C9B0B13719471CA8F3337A /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EZT/EZT-Prefix.pch";
+				INFOPLIST_FILE = "EZT/EZT-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		971F299519572CD900512301 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21C9B0B13719471CA8F3337A /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EZT/EZT-Prefix.pch";
+				INFOPLIST_FILE = "EZT/EZT-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		971F299719572CD900512301 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EZT.app/EZT";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EZT/EZT-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "EZTTests/EZTTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		971F299819572CD900512301 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EZT.app/EZT";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EZT/EZT-Prefix.pch";
+				INFOPLIST_FILE = "EZTTests/EZTTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		971F295C19572CD900512301 /* Build configuration list for PBXProject "EZT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				971F299119572CD900512301 /* Debug */,
+				971F299219572CD900512301 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		971F299319572CD900512301 /* Build configuration list for PBXNativeTarget "EZT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				971F299419572CD900512301 /* Debug */,
+				971F299519572CD900512301 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		971F299619572CD900512301 /* Build configuration list for PBXNativeTarget "EZTTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				971F299719572CD900512301 /* Debug */,
+				971F299819572CD900512301 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 971F295919572CD900512301 /* Project object */;
+}
