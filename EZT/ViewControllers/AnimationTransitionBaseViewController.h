@@ -8,4 +8,6 @@
 
 @interface AnimationTransitionBaseViewController : UIViewController <UINavigationControllerDelegate>
 
+- (void)shakeshake;
+
 @end

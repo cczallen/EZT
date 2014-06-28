@@ -30,7 +30,25 @@
 }
 
 - (void)setText:(NSString *)text {
+	
+	if (!DebugTweakValue(@"ShowText", YES)) {
+		return;
+	}
+	
+	BOOL initTextLabel = NO;
+	if (!self.textLabel) {
+		initTextLabel = YES;
+	}
 	[super setText:text];
+	if (initTextLabel) {
+		self.textLabel.autoresizingMask = (
+		UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin |
+		UIViewAutoresizingFlexibleLeftMargin |
+		UIViewAutoresizingFlexibleWidth |
+		UIViewAutoresizingFlexibleRightMargin |
+		UIViewAutoresizingFlexibleHeight );
+
+	}
 	
 	NSString *subString = [text substringWithRange:[text rangeOfString:@"^.+\n" options:NSRegularExpressionSearch]];
 	UIFont *defaultFont = [UIFont fontWithName:@"HelveticaNeue-Thin" size:38];
@@ -42,6 +60,17 @@
 		CGFloat newSize = MAX(19, defaultFont.pointSize /percentage);
 		self.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:newSize];	//HelveticaNeue-Thin HelveticaNeue-ultralight
 	}
+}
+
+- (void)layoutSubviews{
+//    [super layoutSubviews];
+    UICollectionView *collectionView = (UICollectionView *)[self superview];
+	if ([collectionView isKindOfClass:[UICollectionView class]]) {
+		CGFloat offset=self.frame.origin.y-[collectionView contentOffset].y;
+		CGFloat parallaxValue=offset/self.superview.frame.size.height;
+		self.parallaxValue=parallaxValue;
+	}
+	self.parallaxValue = self.parallaxValue;
 }
 
 @end

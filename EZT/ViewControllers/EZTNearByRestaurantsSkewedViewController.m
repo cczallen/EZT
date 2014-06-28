@@ -101,7 +101,8 @@ static NSString *kCell=@"MPSkewedCell";
 		}else {
 			//stub
 			NSArray *newDatas = [self.dataArray copy];
-			dispatchAfter(2, ^{	//simulate an async load
+			double delayInSeconds = APITweakValue(@"simulate time", 2.0);
+			dispatchAfter(delayInSeconds, ^{	//simulate an async load
 				NSUInteger __block idx = self.dataArray.count;
 				[self.dataArray addObjectsFromArray:newDatas];
 				NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:newDatas.count];
@@ -141,6 +142,10 @@ static NSString *kCell=@"MPSkewedCell";
 	UIScreenEdgePanGestureRecognizer *popRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePopRecognizer:)];
     popRecognizer.edges = UIRectEdgeLeft;
     [self.view addGestureRecognizer:popRecognizer];
+	
+	dispatchAfter(2, ^{
+		[self shakeshake];
+	});
 }
 
 - (void)_setCollectionView	{
@@ -163,8 +168,8 @@ static NSString *kCell=@"MPSkewedCell";
     collectionView.delegate=self;
     collectionView.dataSource=self;
     collectionView.backgroundColor=[UIColor whiteColor];
-	collectionView.decelerationRate = UIScrollViewDecelerationRateFast;
-	collectionView.allowsSelection = NO;
+	collectionView.decelerationRate = 1.1;	//UIScrollViewDecelerationRateNormal: 0.998, UIScrollViewDecelerationRateFast: 0.990000
+//	collectionView.allowsSelection = NO;
 	collectionView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
     [collectionView registerClass:[MPSkewedCell_FontSizeAdjust class] forCellWithReuseIdentifier:kCell];
     [self.view addSubview:collectionView];
@@ -172,6 +177,8 @@ static NSString *kCell=@"MPSkewedCell";
 }
 
 
+
+#pragma mark - UICollectionViewDataSource, UICollectionViewDelegate
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return [self.dataArray count];
 }
@@ -241,36 +248,38 @@ static NSString *kCell=@"MPSkewedCell";
     return cell;
 }
 
-/*
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 	
     NSLog(@"item %li",(long)indexPath.item);
+
+	[self _doSomeThingByIndexPath:indexPath];
 	
-    NSInteger bk=choosed;
-    
-    if(choosed==-1)
-        choosed=indexPath.item;
-    else choosed=-1;
-    
-    NSMutableArray *arr=[[NSMutableArray alloc] init];
-    
-    for (NSInteger i=0; i<30; i++) {
-        if (i!=choosed && i!=bk) {
-            [arr addObject:[NSIndexPath indexPathForItem:i inSection:0]];
-        }
-    }
-    
-    [collectionView performBatchUpdates:^{
-        if (choosed==-1) {
-            [collectionView insertItemsAtIndexPaths:arr];
-        }else [collectionView deleteItemsAtIndexPaths:arr];
-    } completion:^(BOOL finished) {
-        
-    }];
+//    NSInteger bk=choosed;
+//    
+//    if(choosed==-1)
+//        choosed=indexPath.item;
+//    else choosed=-1;
+//    
+//    NSMutableArray *arr=[[NSMutableArray alloc] init];
+//    
+//    for (NSInteger i=0; i<30; i++) {
+//        if (i!=choosed && i!=bk) {
+//            [arr addObject:[NSIndexPath indexPathForItem:i inSection:0]];
+//        }
+//    }
+//    
+//    [collectionView performBatchUpdates:^{
+//        if (choosed==-1) {
+//            [collectionView insertItemsAtIndexPaths:arr];
+//        }else [collectionView deleteItemsAtIndexPaths:arr];
+//    } completion:^(BOOL finished) {
+//        
+//    }];
 	
 	
 }
-*/
+
 
 #pragma mark <UINavigationControllerDelegate>
 - (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
@@ -306,6 +315,67 @@ static NSString *kCell=@"MPSkewedCell";
         self.interactivePopTransition = nil;
     }
 	
+}
+
+
+#pragma mark - ShakeShake
+- (void)shakeshake {
+	[super shakeshake];
+	
+	NSUInteger count = self.dataArray.count;
+	if (count == 0) {
+		return;
+	}
+	NSUInteger idx = GetRandomFromTo(0, count-2);
+	NSIndexPath *indexPath = [NSIndexPath indexPathForRow:idx inSection:0];
+	[self _doSomeThingByIndexPath:indexPath];
+}
+
+- (void)_doSomeThingByIndexPath:(NSIndexPath *)indexPath {
+	[self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:(UICollectionViewScrollPositionCenteredVertically) animated:YES];
+	dispatchAfter(0.4, ^{
+		MPSkewedCell_FontSizeAdjust *cell = (MPSkewedCell_FontSizeAdjust *)[self.collectionView cellForItemAtIndexPath:indexPath];
+		
+		UIView *snap = [cell snapshotViewAfterScreenUpdates:NO];
+		CGRect frame = [self.view convertRect:cell.frame fromView:cell.superview];
+		snap.frame = frame;
+		
+		
+		MPSkewedCell_FontSizeAdjust *cell2 = [[MPSkewedCell_FontSizeAdjust alloc] initWithFrame:cell.bounds];
+		cell2.text = cell.text;
+		cell2.imageView.image = cell.imageView.image;
+		cell2.frame = frame;
+		cell2.parallaxValue = cell.parallaxValue;
+		
+		[self.view addSubview:cell2];
+		cell.hidden = YES;
+		
+		[UIView animateWithDuration:0.4 animations:^{
+			cell2.textLabel.alpha = 0;
+		} completion:^(BOOL finished) {
+			
+			dispatchAfter(0.2, ^{
+				[UIView animateWithDuration:0.3 animations:^{
+					//				cell2.transform = CGAffineTransformMakeScale(1.3, 1.3);
+					//					cell2.frame = CGRectInset(cell2.frame, 0, -50);
+					cell2.frame = cell2.superview.bounds;
+				} completion:^(BOOL finished) {
+					
+					dispatchAfter(0.8, ^{
+						[UIView animateWithDuration:0.3 animations:^{
+//							cell2.frame = CGRectInset(cell2.frame, 0, 50);
+							cell2.frame = frame;
+						} completion:^(BOOL finished) {
+							cell.hidden = NO;
+							[cell2 removeFromSuperview];
+						}];
+					});
+				}];
+			});
+			
+		}];
+		
+	});
 }
 
 @end
