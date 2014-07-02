@@ -28,3 +28,14 @@ typedef void(^ResultsBlock)(NSArray *results);
 + (void)handleError:(NSError *)error;
 
 @end
+
+
+
+#import <CoreLocation/CoreLocation.h>
+@class Promise;
+
+@interface CLGeocoder (DelayedReverseGeocode)
+
++ (Promise *)delayedReverseGeocode:(CLLocation *)location;
+
+@end

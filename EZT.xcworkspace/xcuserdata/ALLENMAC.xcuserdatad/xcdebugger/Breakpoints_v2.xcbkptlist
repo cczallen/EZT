@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EZT/ViewControllers/EZTNearByRestaurantsSkewedViewController.m"
-            timestampString = "425399754.95675"
+            timestampString = "425966082.639016"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "221"
-            endingLineNumber = "221"
+            startingLineNumber = "232"
+            endingLineNumber = "232"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EZT/ViewControllers/ALTransition.m"
-            timestampString = "425284053.965113"
+            timestampString = "425966575.382729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "-animateTransition:"
             landmarkType = "5">
          </BreakpointContent>
@@ -75,52 +75,6 @@
             continueAfterRunningActions = "No"
             scope = "0"
             stopOnStyle = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EZT/Services/EZTService.m"
-            timestampString = "425321400.96278"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "+reqNearByRestaurantsWithStart:andN:completion:"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__60+[EZTService reqNearByRestaurantsWithStart:andN:completion:]_block_invoke55"
-                  moduleName = "EZT"
-                  urlString = "file:///Users/ALLENMAC/Documents/Codes/Private%20Repositories/EZT/EZT/Services/EZTService.m"
-                  timestampString = "425321400.988888"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "50">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__60+[EZTService reqNearByRestaurantsWithStart:andN:completion:]_block_invoke_2"
-                  moduleName = "EZT"
-                  urlString = "file:///Users/ALLENMAC/Documents/Codes/Private%20Repositories/EZT/EZT/Services/EZTService.m"
-                  timestampString = "425321400.989039"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "52">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -146,6 +100,38 @@
                   </ActionContent>
                </BreakpointActionProxy>
             </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EZT/ViewControllers/EZTNearByRestaurantsSkewedViewController.m"
+            timestampString = "425966082.639016"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
+            landmarkName = "-collectionView:cellForItemAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EZT/ViewControllers/ALTransition.m"
+            timestampString = "425966248.867976"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "-animationPopNearBy:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

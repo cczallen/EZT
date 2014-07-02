@@ -36,6 +36,7 @@
 		9737E18B19581B930076EABA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9737E18A19581B930076EABA /* Podfile */; };
 		9757E19619594B0100E73FA2 /* ALTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9757E19519594B0100E73FA2 /* ALTransition.m */; };
 		9757E1991959512F00E73FA2 /* AnimationTransitionBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9757E1981959512F00E73FA2 /* AnimationTransitionBaseViewController.m */; };
+		97F5EF591963B56E00C834A4 /* EZTRestaurantInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F5EF581963B56E00C834A4 /* EZTRestaurantInfoViewController.m */; };
 		EB1CB58321F64C94A6BB8D6D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 307E6F8BBAFF44049FD90331 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,8 @@
 		9757E19519594B0100E73FA2 /* ALTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALTransition.m; sourceTree = "<group>"; };
 		9757E1971959512F00E73FA2 /* AnimationTransitionBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = AnimationTransitionBaseViewController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 1; wrapsLines = 0; };
 		9757E1981959512F00E73FA2 /* AnimationTransitionBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationTransitionBaseViewController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 1; wrapsLines = 0; };
+		97F5EF571963B56E00C834A4 /* EZTRestaurantInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZTRestaurantInfoViewController.h; sourceTree = "<group>"; };
+		97F5EF581963B56E00C834A4 /* EZTRestaurantInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZTRestaurantInfoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +214,8 @@
 				971F299E19572E0000512301 /* EZTNearByRestaurantViewController.m */,
 				972803A91957F5B800AE1956 /* EZTNearByRestaurantsSkewedViewController.h */,
 				972803AA1957F5B800AE1956 /* EZTNearByRestaurantsSkewedViewController.m */,
+				97F5EF571963B56E00C834A4 /* EZTRestaurantInfoViewController.h */,
+				97F5EF581963B56E00C834A4 /* EZTRestaurantInfoViewController.m */,
 				972803AC1957FBFF00AE1956 /* MPSkewedCell_FontSizeAdjust.h */,
 				972803AD1957FBFF00AE1956 /* MPSkewedCell_FontSizeAdjust.m */,
 				9757E1971959512F00E73FA2 /* AnimationTransitionBaseViewController.h */,
@@ -419,6 +424,7 @@
 				972803A61957F55C00AE1956 /* MPSkewedParallaxLayout.m in Sources */,
 				972803A71957F55C00AE1956 /* MPSkewedTransitionLayout.m in Sources */,
 				971F297119572CD900512301 /* main.m in Sources */,
+				97F5EF591963B56E00C834A4 /* EZTRestaurantInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

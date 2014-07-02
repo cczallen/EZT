@@ -10,4 +10,6 @@
 
 @interface EZTNearByRestaurantsSkewedViewController : AnimationTransitionBaseViewController
 
+- (UIImageView *)getSelectedImageViewForAnimation;
+
 @end

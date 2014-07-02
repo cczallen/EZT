@@ -114,10 +114,51 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="18o-2p-5jL"/>
+                    <connections>
+                        <segue destination="Wgg-4J-udN" kind="push" identifier="EnterRestaurantInfo" id="eR6-lL-2F7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFj-2r-Vu6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1222" y="585"/>
+        </scene>
+        <!--Restaurant Info View Controller-->
+        <scene sceneID="rHz-yJ-Owo">
+            <objects>
+                <viewController storyboardIdentifier="EZTRestaurantInfoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wgg-4J-udN" customClass="EZTRestaurantInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fp1-9k-2jh"/>
+                        <viewControllerLayoutGuide type="bottom" id="EbI-Wt-oPm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OLw-80-gKt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0vd-jn-yG7">
+                                <rect key="frame" x="0.0" y="64" width="320" height="250"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H1t-gb-iVE">
+                                <rect key="frame" x="40" y="322" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="I0F-GO-U90"/>
+                    <connections>
+                        <outlet property="imgV" destination="0vd-jn-yG7" id="cC8-w0-0v2"/>
+                        <outlet property="tx1" destination="H1t-gb-iVE" id="d77-l7-PF7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2JQ-34-gDM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1604" y="585"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dbb-NI-fm6">

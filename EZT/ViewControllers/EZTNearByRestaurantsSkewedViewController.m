@@ -7,6 +7,7 @@
 //
 
 #import "EZTNearByRestaurantsSkewedViewController.h"
+#import "EZTRestaurantInfoViewController.h"
 #import "MPSkewedCell_FontSizeAdjust.h"
 #import "MPSkewedParallaxLayout.h"
 #import "UIImageView+WebCache.h"
@@ -23,7 +24,8 @@ static NSString *kCell=@"MPSkewedCell";
 ,UIScrollViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
-@property (nonatomic, strong) NSMutableDictionary *addressDic; //@{@(id): @"address"}
+//@property (nonatomic, strong) NSMutableDictionary *addressDic; //@{}
+@property (nonatomic, strong) NSCache *addressCache;		//@(id): @"address"
 @property (nonatomic, strong) UICollectionView *collectionView;
 
 @property (nonatomic, strong) UIPercentDrivenInteractiveTransition *interactivePopTransition;;
@@ -37,15 +39,23 @@ static NSString *kCell=@"MPSkewedCell";
 @implementation EZTNearByRestaurantsSkewedViewController
 
 - (void)reloadData	{
+	[TSMessage showNotificationInViewController:self title:@"loading..." subtitle:nil type:TSMessageNotificationTypeMessage duration:TSMessageNotificationDurationEndless];
+
 	[EZTService reqNearByRestaurants:^(NSArray *results) {
 		self.dataArray = [results mutableCopy];
-		self.addressDic = nil;
+//		self.addressDic = nil;
 		self.collectionView.alpha = 0;
 		[self.collectionView reloadData];
 		[self _updateTitle];
 		[UIView animateWithDuration:0.26 animations:^{
 			self.collectionView.alpha = 1.0;
 		}];
+		[TSMessage dismissActiveNotification];
+		dispatchAfter(0.6, ^{
+			if ([TSMessage isNotificationActive]) {
+				[TSMessage dismissActiveNotification];
+			}
+		});
 	}];
 }
 
@@ -136,6 +146,7 @@ static NSString *kCell=@"MPSkewedCell";
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
 	[self _setCollectionView];
 	[self reloadData];
 	
@@ -143,9 +154,9 @@ static NSString *kCell=@"MPSkewedCell";
     popRecognizer.edges = UIRectEdgeLeft;
     [self.view addGestureRecognizer:popRecognizer];
 	
-	dispatchAfter(2, ^{
-		[self shakeshake];
-	});
+//	dispatchAfter(2, ^{
+//		[self shakeshake];
+//	});
 }
 
 - (void)_setCollectionView	{
@@ -209,20 +220,26 @@ static NSString *kCell=@"MPSkewedCell";
 	 ];
 	
 	if (DebugTweakValue(@"ReverseGeoCode", YES)) {
-		if (!self.addressDic) {
-			self.addressDic = [NSMutableDictionary dictionaryWithCapacity:self.dataArray.count];
-		}
+//		if (!self.addressDic) {
+//			self.addressDic = [NSMutableDictionary dictionaryWithCapacity:self.dataArray.count];
+//		}
 		
 		void (^updateCell)(NSUInteger, NSString *) = ^(NSUInteger row, NSString *address){
 			if (row == myRow) {
 				NSString *newText = [NSString stringWithFormat:@"%@\n%@", str, address];
 				cell.text = newText;
 			}else	{
-				NSLog(@"LOG:  row != myRow]");
+//				NSLog(@"LOG:  row != myRow");
 			}
 		};
 		
-		NSString __block *address = self.addressDic[restaurantId];
+		if (!self.addressCache) {
+			NSCache *addressCache = [[NSCache alloc] init];
+			[addressCache setCountLimit:1000];
+			self.addressCache = addressCache;
+		}
+		
+		NSString __block *address = [self.addressCache objectForKey:restaurantId];//self.addressDic[restaurantId];
 		if (address) {
 			updateCell(myRow, address);
 		}else	{
@@ -231,11 +248,12 @@ static NSString *kCell=@"MPSkewedCell";
 			if (latlngArray) {
 				CLLocation *someLocation = [[CLLocation alloc] initWithLatitude:[latlngArray[0] floatValue] longitude:[latlngArray[1] floatValue]];
 				[CLGeocoder reverseGeocode:someLocation].then(^(CLPlacemark *firstPlacemark){
+//				[CLGeocoder delayedReverseGeocode:someLocation].then(^(CLPlacemark *firstPlacemark){
 					NSArray *addressArray = [firstPlacemark addressDictionary][@"FormattedAddressLines"];
 					if ([addressArray count]) {
 						address = addressArray[0];
 						NSUInteger row = [collectionView indexPathForCell:cell].row;
-						self.addressDic[restaurantId] = address;
+						[self.addressCache setObject:address forKey:restaurantId];//self.addressDic[restaurantId] = address;
 						updateCell(row, address);
 					}
 				}).catch(^(NSError *error){
@@ -334,8 +352,11 @@ static NSString *kCell=@"MPSkewedCell";
 - (void)_doSomeThingByIndexPath:(NSIndexPath *)indexPath {
 	[self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:(UICollectionViewScrollPositionCenteredVertically) animated:YES];
 	dispatchAfter(0.4, ^{
-		MPSkewedCell_FontSizeAdjust *cell = (MPSkewedCell_FontSizeAdjust *)[self.collectionView cellForItemAtIndexPath:indexPath];
+
 		
+		[self performSegueWithIdentifier:@"EnterRestaurantInfo" sender:nil];
+
+		/*
 		UIView *snap = [cell snapshotViewAfterScreenUpdates:NO];
 		CGRect frame = [self.view convertRect:cell.frame fromView:cell.superview];
 		snap.frame = frame;
@@ -374,8 +395,40 @@ static NSString *kCell=@"MPSkewedCell";
 			});
 			
 		}];
-		
+		*/
 	});
+}
+
+- (UIImageView *)getSelectedImageViewForAnimation {
+
+	NSArray *items = [self.collectionView indexPathsForSelectedItems];
+	if ([items count] == 0) {
+		return nil;
+	}
+	
+	NSIndexPath *indexPath = items[0];
+	
+	MPSkewedCell_FontSizeAdjust *cell = (MPSkewedCell_FontSizeAdjust *)[self.collectionView cellForItemAtIndexPath:indexPath];
+	return cell.imageView;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+	EZTRestaurantInfoViewController *infoVC = segue.destinationViewController;
+	
+	NSArray *items = [self.collectionView indexPathsForSelectedItems];
+	if ([items count] == 0) {
+		return;
+	}
+	NSIndexPath *indexPath = items[0];
+	uint myRow = (uint)indexPath.row;
+
+	//data
+	id data = self.dataArray[myRow];
+	[infoVC setData:data];
+	
+	//img
+	UIImage *img = [self getSelectedImageViewForAnimation].image;
+	[infoVC setImg:img];
 }
 
 @end
